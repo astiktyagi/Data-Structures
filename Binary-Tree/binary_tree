@@ -1,0 +1,38 @@
+""" API to use Binary tree functions """
+
+
+class BinaryTree(object):
+
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+    def get_left(self):
+        return self.left
+
+    def get_right(self):
+        return self.right
+
+    def set_left(self, data):
+        self.left = data
+
+    def set_right(self, data):
+        self.right = data
+
+    def is_root(self):
+        if self.left is None and self.right is None:
+            return True
+        else:
+            return False
+
+
+def get_binary_tree_dataset_1():
+    b = BinaryTree(1)
+    b.left = BinaryTree(2)
+    b.right = BinaryTree(3)
+    b.left.left = BinaryTree(10)
+    b.left.right = BinaryTree(19)
+    b.right.right = BinaryTree(7)
+    b.right.left = BinaryTree(0)
+    return b
